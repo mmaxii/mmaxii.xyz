@@ -108,6 +108,7 @@
     <img id="avatar01" alt="Awatar" src="">
   </span>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   async function loadImage(fileName, imgId) {
@@ -115,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const resp = await fetch(`/generate?file=${fileName}`);
       if (!resp.ok) throw new Error("Failed to fetch image URL");
       const data = await resp.json();
+
       document.getElementById(imgId).src = data.url;
     } catch (err) {
       console.error(err);
