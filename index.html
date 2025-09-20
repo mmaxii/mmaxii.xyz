@@ -105,28 +105,9 @@
 </div>
 <div class="image-component instance-1" id="image01">
   <span class="frame">
-    <img id="avatar01" alt="Awatar" src="">
+    <img id="avatar01" alt="avatar" src="/avatar.png">
   </span>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-  const fileName = "fbaNyMZ1yz57AuE0w75SATjQDDxhNCjtVf9jZtJpJHzqd8WkDZwEH1rjwTBCyX9b.png";
-  try {
-    // Pobranie obrazu z Worker z nagłówkiem x-secret-key
-    const resp = await fetch(`/image/${fileName}`, {
-      headers: { "x-secret-key": "supersecret123" }
-    });
-    
-    if (!resp.ok) throw new Error("Access denied or file not found");
-
-    const blob = await resp.blob();
-    document.getElementById("avatar01").src = URL.createObjectURL(blob);
-  } catch (err) {
-    console.error(err);
-    document.getElementById("avatar01").alt = "Access Denied";
-  }
-});
-</script>
 <h1 class="text-component instance-28" id="text28">Pfp by <span style="color: #d98dbd">Toonize</span> &lt;3</h1>
 <h2 class="text-component instance-4" id="text04"><strong>Max / mmaxii</strong></h2>
 <p class="text-component instance-23" id="text23"><strong>16 ★ he/him ★ 💕</strong></p>
