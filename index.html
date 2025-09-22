@@ -25,6 +25,54 @@
          <style>body {overflow: auto !important;}.site-main {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}.site-main > .inner > section {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}.site-main > .inner > section > * {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}</style>
       </noscript>
    </head>
+
+ <div id="poland-time"></div>
+
+   <style>
+      #poland-time {
+         position: fixed;
+         top: 20px;
+         z-index: 9999;
+         visibility: visible;
+         opacity: 1;
+         font-family: 'Exo 2', sans-serif;
+         color: #BAA1CC;
+         font-size: 16px;
+         text-align: center;
+         /* Dodajemy right, aby wyśrodkować zegar */
+         right: 50%;
+         transform: translateX(50%);
+      }
+
+      @media (max-width: 768px) {
+         #poland-time {
+            top: 10px;
+            right: 10px;
+            transform: none;
+         }
+      }
+   </style>
+
+   <script>
+      function updateTime() {
+         let now = new Date();
+         let options = {
+            timeZone: "Europe/Warsaw",
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true
+         };
+         let formattedTime = new Intl.DateTimeFormat("en-GB", options).format(now);
+         let cleanTime = formattedTime.replace(" at ", " • ");
+         document.getElementById("poland-time").innerHTML = `UTC+2 (CEST) • ${cleanTime}`;
+      }
+      setInterval(updateTime, 1000);
+      updateTime();
+   </script>
+   
    <body class="is-loading">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
          <symbol id="icon-0fab58c8cba7ae847fa5ba32ea5a4bea" viewBox="0 0 40 40">
@@ -94,10 +142,10 @@
          <div class="site-main">
             <div class="inner">
                <section id="about-section">
-                  <div id="image01" class="image-component instance-1"><span class="frame"><img src="https://cdn2.mmaxii.xyz/fbaNyMZ1yz57AuE0w75SATjQDDxhNCjtVf9jZtJpJHzqd8WkDZwEH1rjwTBCyX9b.png" alt="Awatar" /></span></div>
+                  <div class="image-component instance-1" id="image01"><span class="frame"><img draggable="false" oncontextmenu="return false;" onmousedown="return false;" style="pointer-events:none;user-select:none;border-radius:50%;aspect-ratio:1/1;object-fit:cover;" alt="" src="https://cdn2.mmaxii.xyz/fbaNyMZ1yz57AuE0w75SATjQDDxhNCjtVf9jZtJpJHzqd8WkDZwEH1rjwTBCyX9b.png?token=mnG%26Ak%25sn%3C%24z%23p%3FHr3M%3F%5DCeWy!%25Hz%3C%25E%3C%3B*8v7ss%26fedArNts:nyZEe(cBMdD?W3"/></span></div>
                   <h1 id="text28" class="text-component instance-28">Pfp by <span style="color: #d98dbd">Toonize</span> &lt;3</h1>
                   <h2 id="text04" class="text-component instance-4"><strong>Max / mmaxii</strong></h2>
-                  <p id="text23" class="text-component instance-23"><strong>16 ★ he/him ★ 💕</strong></p>
+                  <p id="text23" class="text-component instance-23"><strong>17 ★ he/him ★ 💕</strong></p>
                   <hr id="divider05" class="divider-component instance-5">
                   <div id="container05" class="container-component instance-5 default">
                      <div class="wrapper">
