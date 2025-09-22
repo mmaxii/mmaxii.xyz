@@ -31,16 +31,22 @@
 
 <style>
 #poland-time {
-  margin-top: 20px
-  position: relative;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   z-index: 9999;
   visibility: visible;
   opacity: 1;
+  font-family: 'Exo 2', sans-serif;
+  color: #BAA1CC;
+  font-size: 16px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   #poland-time {
-    margin-top: 10px;
+    top: 10px;
+    right: 10px;
   }
 }
 </style>
@@ -144,24 +150,7 @@ updateTime();
 </div>
 </div>
 </div>
-<div class="image-component instance-1" id="image01">
-  <span class="frame">
-    <img 
-      draggable="false" 
-      oncontextmenu="return false;" 
-      onmousedown="return false;" 
-      style="
-        pointer-events: none;
-        user-select: none;
-        border-radius: 50%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-      "
-      alt="" 
-      src="https://cdn2.mmaxii.xyz/fbaNyMZ1yz57AuE0w75SATjQDDxhNCjtVf9jZtJpJHzqd8WkDZwEH1rjwTBCyX9b.png?token=mnG%26Ak%25sn%3C%24z%23p%3FHr3M%3F%5DCeWy!%25Hz%3C%25E%3C%3B*8v7ss%26fedArNts:nyZEe(cBMdD?W3"
-    />
-  </span>
-</div>
+<div class="image-component instance-1" id="image01"><span class="frame"><img draggable="false" oncontextmenu="return false;" onmousedown="return false;" style="pointer-events:none;user-select:none;border-radius:50%;aspect-ratio:1/1;object-fit:cover;" alt="" src="https://cdn2.mmaxii.xyz/fbaNyMZ1yz57AuE0w75SATjQDDxhNCjtVf9jZtJpJHzqd8WkDZwEH1rjwTBCyX9b.png?token=mnG%26Ak%25sn%3C%24z%23p%3FHr3M%3F%5DCeWy!%25Hz%3C%25E%3C%3B*8v7ss%26fedArNts:nyZEe(cBMdD?W3"/></span></div>
 <h1 class="text-component instance-28" id="text28">Pfp by <span style="color: #d98dbd">Toonize</span> &lt;3</h1>
 <h2 class="text-component instance-4" id="text04"><strong>Max / mmaxii</strong></h2>
 <p class="text-component instance-23" id="text23"><strong>16 ★ he/him ★ 💕</strong></p>
@@ -194,12 +183,12 @@ updateTime();
 </a>
 </li>
 <li>
-<a class="n03" href="#flags" role="button">
+<a href="#calendar" class="n03" role="button">
 <svg aria-labelledby="buttons04-icon-3-title">
-<title id="buttons04-icon-3-title">Star</title>
-<use xlink:href="#icon-6ee79a7585f3f3c012d0dfdbadcd1366"></use>
+<title id="buttons04-icon-3-title">Calendar</title>
+<use xlink:href="#icon-59c45c646c93a770c2b114cf72c44f8e"></use>
 </svg>
-<span class="label">My flags</span>
+<span class="label">Calendar</span>
 </a>
 </li>
 </ul>
@@ -312,36 +301,34 @@ updateTime();
 </div>
 </div>
 </section>
-<section id="flags-section">
-<h2 class="text-component instance-3" id="text03"><strong>My flags</strong></h2>
-<hr class="divider-component instance-6" id="divider06"/>
-<div class="gallery-component instance-1" id="gallery01">
+<section id="calendar-section">
+<h2 id="text03" class="text-component instance-3"><strong>Calendar</strong></h2>
+<hr id="divider06" class="divider-component instance-6">
+<div id="table01" class="table-component instance-1">
 <div class="inner">
-<ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date #1</td>
+<td>Event #2</td>
+</tr>
+<tr>
+<td>Date #2</td>
+<td>Event #2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul id="buttons05" class="buttons-component instance-5">
 <li>
-<a class="thumbnail n01" data-lightbox-ignore="1" href="https://lgbtqia.wiki/wiki/Homoromantic_Bisexual"><span class="frame"><img alt="Bisexual flag" src="assets/images/gallery01/3befd173.png?v=006e8e4b"/></span></a>
-<div class="caption">
-<p>Homoromantic Bisexual</p>
-</div>
-</li>
-<li>
-<a class="thumbnail n02" data-lightbox-ignore="1" href="https://lgbtqia.wiki/wiki/Greysexual"><span class="frame"><img alt="Grayasexual flag" src="assets/images/gallery01/43692455.png?v=006e8e4b"/></span></a>
-<div class="caption">
-<p>Grayasexual</p>
-</div>
-</li>
-<li>
-<a class="thumbnail n03" data-lightbox-ignore="1" href="https://lgbtqia.wiki/wiki/Aroaceflux"><span class="frame"><img alt="Aroaceflux flag" src="assets/images/gallery01/272994a1.png?v=006e8e4b"/></span></a>
-<div class="caption">
-<p>Aroaceflux</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<ul class="buttons-component instance-5" id="buttons05">
-<li>
-<a class="n01" onclick="history.back();" role="button">
+<a onclick="history.back();" class="n01" role="button">
 <svg aria-labelledby="buttons05-icon-1-title">
 <title id="buttons05-icon-1-title">Arrow Left (Light)</title>
 <use xlink:href="#icon-d36ef00e72dfeb0faab93ac5cd41be92"></use>
