@@ -29,10 +29,17 @@
 <div id="poland-time" style="font-family: 'Exo 2', sans-serif; color: #BAA1CC; font-size: 16px; text-align: center;"></div>
 
 <style>
-@media (max-width: 768px) {
 #poland-time {
-  margin-top: 10px;
+  position: relative;
+  z-index: 9999;
+  visibility: visible;
+  opacity: 1;
 }
+
+@media (max-width: 768px) {
+  #poland-time {
+    margin-top: 10px;
+  }
 }
 </style>
 
